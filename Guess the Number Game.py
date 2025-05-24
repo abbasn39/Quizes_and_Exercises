@@ -7,7 +7,7 @@ i=0
 print("You have 10 guesses")
 while True:
     i=i+1
-    if i<10:
+    if i<=10:
         Guesses_left = 10 - i
         Number = int(input("Please enter your guess:\n"))
         if Number==Secret_Number:
@@ -25,3 +25,8 @@ while True:
     else:
         print("you are out of guesses")
         break
+
+
+#In line 14 where the program checks if "i=1", this means that when the user guesses the number on the first attempt
+# the program will print the "... all guesses left" statement. 'i' is incremented on each attempt so when the user
+# hasn't even guessed once it's value has already turned from 0 to 1 because of line 9.
