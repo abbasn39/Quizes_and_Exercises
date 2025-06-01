@@ -1,5 +1,5 @@
-# Print a pattern using a input
-# n is a integer input from the user which defines the numbers of rows
+# Print a pattern using an input
+# n is an integer input from the user which defines the numbers of rows
 # The rows will have asterisk printed in then in ascending or descending order depending on another  input from the user
 # Ask user for a 1 or 0 input representing True and False Boolean input
 # if True program will print asterisk by rows starting form 1 * and ending with n * with each row having 1 more than the
@@ -51,3 +51,6 @@ try:
               continue
 except ValueError:
     print("invalid input")
+
+
+# I haven't used bool typecasting because it seemed redundant but I will look into this option as well.
