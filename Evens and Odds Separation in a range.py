@@ -12,5 +12,6 @@ for i in range(x,y+1):
     else:
         Odd.append(i)
 
+
 print("List of even numbers\n\t",Even)
 print("List of Odd numbers\n\t",Odd)
