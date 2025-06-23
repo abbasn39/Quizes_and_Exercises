@@ -53,4 +53,4 @@ except ValueError:
     print("invalid input")
 
 
-# I haven't used bool typecasting because it seemed redundant but I will look into this option as well.
+# I haven't used bool typecasting because it seemed redundant, but I will look into this option as well.
