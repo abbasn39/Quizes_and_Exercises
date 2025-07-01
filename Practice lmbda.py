@@ -12,12 +12,13 @@ addition= lambda x:x+10
 b_add_10=[addition(x) for x in b]
 print(b_add_10)
 
-#Filter Even numbers in a list
-# c=[1,2,3,4,5,6,7,8,9,10]
-# filter_even= lambda x:x%2==0
+# # Filter Even numbers in a list
 #
-# c_filter_even=[filter_even(x) for x in c]
+# c=[1,2,3,4,5,6,7,8,9,10]
+# filter_even= lambda x:
+#
+# c_filter_even=[filter_even(c) for x in c]
 # for i in c_filter_even:
-#     print[i]
-
+#     print[c]
+#
 
