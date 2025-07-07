@@ -20,7 +20,7 @@ def check_leap(year):
         return f"the year {year} is not a leap year"
 
 
-
+print("This program will check if a year is leap or not.")
 while True:
     user_input = input("Enter a year in XXXX format or type quit to exit: \n").strip() #.strip() avoids accidental spaces
     if user_input.lower() == "quit":
