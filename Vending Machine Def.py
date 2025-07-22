@@ -38,4 +38,5 @@ def purchase_stock(item):
                                   "3-Exit\n")
     if item_selected == 1:
         quantity = get_int_input(f"How many candies would you like to purchase?\n")
-
+        total_cost = quantity * cost_candy
+        balance= balance - total_cost
