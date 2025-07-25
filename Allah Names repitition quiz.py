@@ -291,6 +291,15 @@ def dict_index_selector():
     return i
 
 def option_generator(meaningsx):
-    option1= meaningsx.get(dict_index_selector())
-    pass
+    i=1
+    for k in meaningsx.keys():
+        print(i,k)
+        i = i + 1
+    return i,k
 
+def main():
+    input_user(user)
+    print(option_generator(meaningsx))
+
+
+main()
