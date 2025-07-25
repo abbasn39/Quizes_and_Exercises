@@ -49,14 +49,15 @@
 
 #5- Make a program that checks if a work is a palindrome, get input from user.
 #
-# def palindrome(check):
-#     if check == check[::-1]:
-#         print(f"The word '{check}' is a palindrome")
-#     else:
-#         print(f"The word '{check}' is not a palindrome")
-#
-# word = input("Please enter the word you want to check:\n")
-# palindrome(word)
+def palindrome(check):
+    if check == check[::-1]:
+        print(f"The word '{check}' is a palindrome")
+    else:
+        print(f"The word '{check}' is not a palindrome")
+
+word = input("Please enter the word you want to check:\n")
+palindrome(word)
+
 
 
 
