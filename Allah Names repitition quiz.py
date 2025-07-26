@@ -109,7 +109,7 @@ def main():
 
 
 
-        print(f"What is the meaning of: {names[right_key]}\n")
+        print(f"\nWhat is the meaning of: {names[right_key]}\n")
         print(f"1-{choice_a}\n"
               f"2-{choice_b}\n"
               f"3-{choice_c}\n"
@@ -132,7 +132,7 @@ def main():
                     break
             elif user_input == 3:
                 if choice_c == meanings1.get(right_key):
-                    print("]✅correct✅")
+                    print("✅correct✅")
                     break
                 else:
                     print("❌incorrect, try again❌")
