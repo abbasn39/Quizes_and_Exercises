@@ -1,8 +1,8 @@
-# This program is made to memorise the 99 names of Allah through repetition.
 
 import random
 
-names1 = {
+# These are the two dictionaries we are quizzing from names and meanings respectively.
+names = {
     1: "Ar-Rahman",
     2: "Ar-Raheem",
     3: "Al-Malik",
@@ -14,124 +14,6 @@ names1 = {
     9: "Al-Jabbar",
     10: "Al-Mutakabbir"
 }
-
-names2 = {
-    11: "Al-Khaliq",
-    12: "Al-Bari",
-    13: "Al-Musawwir",
-    14: "Al-Ghaffar",
-    15: "Al-Qahhar",
-    16: "Al-Wahhab",
-    17: "Ar-Razzaq",
-    18: "Al-Fattah",
-    19: "Al-‘Aleem",
-    20: "Al-Qaabid"
-}
-
-
-names3 = {
-    21: "Al-Baasit",
-    22: "Al-Khaafid",
-    23: "Ar-Raafi",
-    24: "Al-Mu’izz",
-    25: "Al-Mudhill",
-    26: "As-Sami",
-    27: "Al-Baseer",
-    28: "Al-Hakam",
-    29: "Al-‘Adl",
-    30: "Al-Lateef"
-}
-
-names4 = {
-    31: "Al-Khabeer",
-    32: "Al-Haleem",
-    33: "Al-‘Azeem",
-    34: "Al-Ghafoor",
-    35: "Ash-Shakoor",
-    36: "Al-‘Aliyy",
-    37: "Al-Kabeer",
-    38: "Al-Hafeez",
-    39: "Al-Muqeet",
-    40: "Al-Haseeb"
-}
-
-names5 = {
-    41: "Al-Jaleel",
-    42: "Al-Kareem",
-    43: "Ar-Raqeeb",
-    44: "Al-Mujeeb",
-    45: "Al-Waasi",
-    46: "Al-Hakeem",
-    47: "Al-Wadood",
-    48: "Al-Majeed",
-    49: "Al-Ba’ith",
-    50: "Ash-Shaheed"
-}
-names6 = {
-    51: "Al-Haqq",
-    52: "Al-Wakeel",
-    53: "Al-Qawiyy",
-    54: "Al-Mateen",
-    55: "Al-Waliyy",
-    56: "Al-Hameed",
-    57: "Al-Muhsee",
-    58: "Al-Mubdi",
-    59: "Al-Mueed",
-    60: "Al-Muhyi"
-}
-names7 = {
-    61: "Al-Mumeet",
-    62: "Al-Hayy",
-    63: "Al-Qayyoom",
-    64: "Al-Waajid",
-    65: "Al-Maajid",
-    66: "Al-Waahid",
-    67: "Al-Ahad",
-    68: "As-Samad",
-    69: "Al-Qaadir",
-    70: "Al-Muqtadir"
-}
-
-
-names8 = {
-    71: "Al-Muqaddim",
-    72: "Al-Mu’akhkhir",
-    73: "Al-Awwal",
-    74: "Al-Aakhir",
-    75: "Az-Zaahir",
-    76: "Al-Baatin",
-    77: "Al-Waali",
-    78: "Al-Muta’ali",
-    79: "Al-Barr",
-    80: "At-Tawwaab"
-}
-
-names9 = {
-    81: "Al-Muntaqim",
-    82: "Al-‘Afuww",
-    83: "Ar-Ra’uf",
-    84: "Maalik-ul-Mulk",
-    85: "Dhul-Jalaali-Wal-Ikram",
-    86: "Al-Muqsit",
-    87: "Al-Jaami",
-    88: "Al-Ghaniyy",
-    89: "Al-Mughni",
-    90: "Al-Maani"
-}
-
-names10 = {
-    91: "Ad-Daarr",
-    92: "An-Naafi",
-    93: "An-Noor",
-    94: "Al-Haadi",
-    95: "Al-Badee’",
-    96: "Al-Baaqi",
-    97: "Al-Waarith",
-    98: "Ar-Rasheed",
-    99: "As-Saboor"
-}
-
-
 
 meanings1 = {
     1: "Nihayat Reham Karne Wala",
@@ -146,139 +28,123 @@ meanings1 = {
     10: "Buzurgi Dikhane Wala"
 }
 
-meanings2 = {
-    11: "Paida Karne Wala",
-    12: "Bina Naqsh Banane Wala",
-    13: "Soorat Banane Wala",
-    14: "Bahut Zyada Maaf Karne Wala",
-    15: "Zabardast Ghalib",
-    16: "Bina Maange Dene Wala",
-    17: "Rizq Dene Wala",
-    18: "Faisla Karne Wala",
-    19: "Har Cheez Ka Ilm Rakhne Wala",
-    20: "Tang Karne Wala"
-}
 
-meanings3 = {
-    21: "Kushada Karne Wala",
-    22: "Girane Wala",
-    23: "Buland Karne Wala",
-    24: "Izzat Dene Wala",
-    25: "Zillat Dene Wala",
-    26: "Sab Sunne Wala",
-    27: "Sab Dekhne Wala",
-    28: "Behtareen Faisla Karne Wala",
-    29: "Insaaf Karne Wala",
-    30: "Bareek Feham, Narm Dil"
-}
+#This function generates a random number which will be the right choice and will be used later.
+# def select_random_key():
+#     k=random.randint(1,10)
+#     return k
+#
+# right_key= select_random_key()
+# print(right_key)
+# print(type(right_key))
 
-meanings4 = {
-    31: "Har Baat Se Waqif",
-    32: "Bohat Bardasht Karne Wala",
-    33: "Nihayat Azeem",
-    34: "Maaf Karne Wala",
-    35: "Shukar Qubool Karne Wala",
-    36: "Nihayat Buland",
-    37: "Bohat Buzurg",
-    38: "Hifazat Karne Wala",
-    39: "Har Cheez Ka Rizq Dene Wala",
-    40: "Hisaab Lene Wala"
-}
+#this function generates wrong choices specifically 3 that will later be
+# combined with the right choice.
+def choice_generator():
+    w_choice=set()
+    c= random.sample(range(1,11),3)
+    for i in c:
+        w_choice.add(i)
+    return w_choice
 
-meanings5 = {
-    41: "Azmat Wala",
-    42: "Nihayat Karam Karne Wala",
-    43: "Har Cheez Par Nigraani Karne Wala",
-    44: "Du’a Sunne Wala",
-    45: "Har Cheez Ko Ghairne Wala",
-    46: "Hakeem-o-Dana",
-    47: "Muhabbat Karne Wala",
-    48: "Buzurgi Wala",
-    49: "Zinda Karne Wala",
-    50: "Har Cheez Ka Gawah"
-}
+# choice=choice_generator()
+# print(choice)
+# print(type(choice))
 
-meanings6 = {
-    51: "Haqeeqat Wala",
-    52: "Kaafi Hone Wala",
-    53: "Nihayat Taqatwar",
-    54: "Mazboot",
-    55: "Madadgaar",
-    56: "Tareef Ke Laayak",
-    57: "Har Cheez Ka Ginnah Rakhne Wala",
-    58: "Ibtida Karne Wala",
-    59: "Dobara Paida Karne Wala",
-    60: "Zindagi Dene Wala"
-}
-
-meanings7 = {
-    61: "Mout Dene Wala",
-    62: "Zinda Rehne Wala",
-    63: "Har Cheez Ko Qaim Rakhne Wala",
-    64: "Paida Karne Wala",
-    65: "Buzurgi Wala",
-    66: "Akele Pan Wala",
-    67: "Wahid, La Shareek",
-    68: "Be Niyaz",
-    69: "Qudrat Rakhnay Wala",
-    70: "Taqat Ka Malik"
-}
-
-meanings8 = {
-    71: "Aagay Badhane Wala",
-    72: "Peechay Karne Wala",
-    73: "Pehla",
-    74: "Aakhri",
-    75: "Zahir Hone Wala",
-    76: "Chhupa Hua",
-    77: "Har Cheez Par Hukumat Karne Wala",
-    78: "Nihayat Buland-o-Bala",
-    79: "Nekiyan Dene Wala",
-    80: "Tauba Qubool Karne Wala"
-}
-
-meanings9 = {
-    81: "Badla Lene Wala",
-    82: "Maaf Karne Wala",
-    83: "Nihayat Meharbaan",
-    84: "Har Mulk Ka Malik",
-    85: "Jalal aur Karam Wala",
-    86: "Insaaf Karne Wala",
-    87: "Jama Karne Wala",
-    88: "Be Niyaz",
-    89: "Ameer Banane Wala",
-    90: "Rokne Wala"
-}
-
-meanings10 = {
-    91: "Nuqsan Dene Wala",
-    92: "Faida Dene Wala",
-    93: "Roshni Dene Wala",
-    94: "Hidayat Dene Wala",
-    95: "Naya Ijaad Karne Wala",
-    96: "Hamesha Rehne Wala",
-    97: "Sab Ka Waaris",
-    98: "Seedha Raasta Dikhane Wala",
-    99: "Sabr Karne Wala"
-}
+# def preliminary_choices():
+#     while True:
+#         wrong_choices=choice_generator()
+#         if right_key not in wrong_choices:
+#             all_choices={right_key}.union(wrong_choices)
+#             return all_choices,wrong_choices
+#
+# multiple_choice,w_choices=preliminary_choices()
+# print(multiple_choice)
 
 
-dictionary_pairs={1:(names1,meanings1),
-                  2:(names2,meanings2),
-                  3:(names3,meanings3),
-                  4:(names4,meanings4),
-                  5:(names5,meanings5),
-                  6:(names6,meanings6),
-                  7:(names7,meanings7),
-                  8:(names8,meanings8),
-                  9:(names9,meanings9),
-                  10:(names10,meanings10)}
+# def print_choices():
+#     choice1 = meanings1.get(list(multiple_choice)[0])
+#     choice2 = meanings1.get(list(multiple_choice)[1])
+#     choice3 = meanings1.get(list(multiple_choice)[2])
+#     choice4 = meanings1.get(list(multiple_choice)[3])
+#     # print(f"1-{choice1}"
+#     #       f"\n2-{choice2}"
+#     #       f"\n3-{choice3}"
+#     #       f"\n4-{choice4}"
+#     #       )
+#     return choice1,choice2,choice3,choice4
+#
+# choice_a,choice_b,choice_c,choice_d = print_choices()
 
 
-def dictionary_selector():
-    user_input=int(input("Please Enter a dictionary Number:"))
-    d=dictionary_pairs[user_input]
-    names_all=d[0]
-    meanings_all=d[1]
-    return names_all,meanings_all
-dictionary_selector()
+
+
+def main():
+    while True:
+
+
+        def select_random_key():
+            k = random.randint(1, 10)
+            return k
+
+        right_key = select_random_key()
+
+        def preliminary_choices():
+            while True:
+                wrong_choices = choice_generator()
+                if right_key not in wrong_choices:
+                    all_choices = {right_key}.union(wrong_choices)
+                    return all_choices, wrong_choices
+
+        multiple_choice, w_choices = preliminary_choices()
+
+        def print_choices():
+            choice1 = meanings1.get(list(multiple_choice)[0])
+            choice2 = meanings1.get(list(multiple_choice)[1])
+            choice3 = meanings1.get(list(multiple_choice)[2])
+            choice4 = meanings1.get(list(multiple_choice)[3])
+            return choice1, choice2, choice3, choice4
+
+        choice_a, choice_b, choice_c, choice_d = print_choices()
+
+
+
+        print(f"What is the meaning of: {names[right_key]}\n")
+        print(f"1-{choice_a}\n"
+              f"2-{choice_b}\n"
+              f"3-{choice_c}\n"
+              f"4-{choice_d}\n")
+        user_input=int(input("select one of the above options:\n"))
+        while True:
+            if user_input == 1:
+                if choice_a == meanings1.get(right_key):
+                    print("✅correct✅")
+                    break
+                else:
+                    print("❌incorrect, try again❌")
+                    break
+            elif user_input == 2:
+                if choice_b == meanings1.get(right_key):
+                    print("✅correct✅")
+                    break
+                else:
+                    print("❌incorrect, try again❌")
+                    break
+            elif user_input == 3:
+                if choice_c == meanings1.get(right_key):
+                    print("]✅correct✅")
+                    break
+                else:
+                    print("❌incorrect, try again❌")
+                    break
+            elif user_input == 4:
+                if choice_d == meanings1.get(right_key):
+                    print("✅correct✅")
+                    break
+                else:
+                    print("❌incorrect, try again❌")
+                    break
+        continue
+
+
+main()
