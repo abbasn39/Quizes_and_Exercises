@@ -281,5 +281,4 @@ def dictionary_selector():
     names_all=d[0]
     meanings_all=d[1]
     return names_all,meanings_all
-
 dictionary_selector()
