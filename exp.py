@@ -282,32 +282,4 @@ def dictionary_selector():
     meanings_all=d[1]
     return names_all,meanings_all
 
-
-
-
-
-names , meanings = dictionary_selector()            #Return two corresponding dictionaries
-
-def dict_index_selector():
-    index=random.randint(1,10)
-    name_selected=names[index]
-    meaning_selected=meanings[index]
-    return index,name_selected,meaning_selected
-
-right_option,name,meaning=dict_index_selector()        # returns key and name with corresponding meaning
-
-
-def choice_generator():
-    # Make sure right_option is included and others are unique
-    other_options = [i for i in range(1, 11) if i != right_option]
-    wrong_choices = random.sample(other_options, 3)
-    options_all = wrong_choices + [right_option]
-    random.shuffle(options_all)  # shuffle for randomness
-    return options_all
-
-multiple_choice = choice_generator()
-print(multiple_choice)
-
-
-
-
+dictionary_selector()
