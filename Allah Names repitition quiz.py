@@ -306,7 +306,7 @@ def choice_generator():
     return options_all
 
 multiple_choice = choice_generator()
-print(multiple_choice)
+
 
 
 
